@@ -10,10 +10,10 @@ public class Settings {
     textFont(myFont);
     strokeWeight(3);
     rect((width/2)-100, 400, 200, 50, 20);
-    fill(0);
+    fill(255, 0, 0);
     strokeWeight(10);
     textSize(25);
-    String homeTxt = "H o m e";
+    String homeTxt = "H O M E";
     text(homeTxt, (width/2), 422);
     popStyle();
   }

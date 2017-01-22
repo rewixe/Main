@@ -59,6 +59,11 @@ void mouseClicked()
     mode = 2; 
   }
   
+  if(mode == 2 && mouseX > 400 && mouseX < 600 && mouseY > 400 && mouseY < 450)
+  {
+    mode = 0; 
+  }
+  
 }
 
 void keyPressed() {

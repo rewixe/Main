@@ -15,8 +15,7 @@ public class Obstacle {
   {
     if (x >= 30 && x <= 60) 
     {
-      background(0);
-      delay(2000);
+      
     }
   }
 }
