@@ -9,8 +9,8 @@ public class Settings {
     myFont = createFont(fontName, 50);
     textFont(myFont);
     strokeWeight(3);
-    rect(200, 100, 300, 50, 20);
-    rect(200, 180, 300, 50, 20);
+    rect(180, 100, 340, 50, 20);
+    rect(180, 180, 340, 50, 20);
     rect((width/2)-100, 400, 200, 50, 20);
     fill(255, 0, 0);
     strokeWeight(10);
@@ -19,8 +19,8 @@ public class Settings {
     String diff = "D I F F I C U L T Y";
     String speed = "S P E E D";
     text(homeTxt, (width/2), 422);
-    text(diff, 260, 120);
-    text(speed, 260, 200);
+    text(diff, 350, 122);
+    text(speed, 350, 202);
     popStyle();
   }
  
