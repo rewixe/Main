@@ -17,6 +17,7 @@ MainMenu startMenu = new MainMenu(); //creates object
 Game game = new Game();
 Player player = new Player();
 Obstacle obstacle = new Obstacle();
+Settings settings = new Settings();
 
 void draw()
 {
@@ -36,6 +37,12 @@ void draw()
     player.player();
     obstacle.obstacle();
     obstacle.hit();
+  }
+  
+  if(mode == 2)
+  {
+    startMenu.bg();
+    settings.buttons();
   }
 }
 
