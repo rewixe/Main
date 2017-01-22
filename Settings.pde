@@ -2,7 +2,7 @@ public class Settings {
   public void buttons()
   {
     pushStyle();
-    fill(0);
+    fill(255);
     textSize(45);
     textAlign(CENTER, CENTER);
     String fontName = "OCR A Extended";
@@ -10,8 +10,11 @@ public class Settings {
     textFont(myFont);
     strokeWeight(3);
     rect((width/2)-100, 400, 200, 50, 20);
-    String homeTxt = "Home";
-    text(homeTxt, (width/2)-100, 450);
+    fill(0);
+    strokeWeight(10);
+    textSize(25);
+    String homeTxt = "H o m e";
+    text(homeTxt, (width/2), 422);
     popStyle();
   }
  
