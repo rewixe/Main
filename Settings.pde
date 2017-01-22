@@ -19,3 +19,5 @@ public class Settings {
   }
  
 }
+
+//settings can deal with difficulty(speed), bg colour, and number of obs.

@@ -8,15 +8,16 @@ int i;
 int py = (240);
 int mode = 0;
 int pspeed = 20;
-float ospeed = 5.0;
-int x = 1000;
+float[] ospeed = {5.0, 5.0};
+int x[] = {1000, 1000};
 int rad = 25;
-float oy = random(50, 450);
+float[] oy = {random(50, 450), random(50, 450)};
 
 MainMenu startMenu = new MainMenu(); //creates object
 Game game = new Game();
 Player player = new Player();
 Obstacle obstacle = new Obstacle();
+Obstacle obstacle2 = new Obstacle();
 Settings settings = new Settings();
 
 void draw()
@@ -36,6 +37,7 @@ void draw()
     game.bg();
     player.player();
     obstacle.obstacle();
+    obstacle2.obstacle2();
     obstacle.hit();
   }
   
