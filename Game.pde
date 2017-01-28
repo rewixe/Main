@@ -8,4 +8,20 @@ public class Game {
     rect((width-width), height-30, width, height-30);
     popStyle();
   }
+  
+  public void timer()
+  {
+    pushStyle();
+    textSize(50);
+    fill(0);
+    count = 7 - (int (millis()/1000));
+    text(count, width/2, height/2);
+    popStyle();
+  }
 }
+
+/*if(timerChk == 0)
+    {
+      game.timer();
+      timerChk = 1;
+    }*/

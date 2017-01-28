@@ -12,7 +12,9 @@ float[] ospeed = {5.0, 5.0};
 int x[] = {1000, 1000};
 int rad = 25;
 float[] oy = {random(50, 450), random(50, 450)};
-int diff = 1;;
+int diff = 1;
+int timerChk = 0;
+int count;
 
 MainMenu startMenu = new MainMenu(); //creates object
 Game game = new Game();
@@ -33,15 +35,20 @@ void draw()
   
   if(mode == 1)
   {
-    background(0, 0, 255);
     game.bg();
-    player.render();
-    obstacle.render();
-    if(diff == 2)
+    game.timer();
+    if(count <= 0)
     {
-      obstacle.obstacle2();
+      background(0, 0, 255);
+      game.bg();
+      player.render();
+      obstacle.render();
+      if(diff == 2)
+      {
+        obstacle.obstacle2();
+      }
+      obstacle.hit();
     }
-    obstacle.hit();
   }
   
   if(mode == 2)
@@ -89,3 +96,4 @@ void keyPressed() {
 //this.example for obs. 
 //gameObject for player and obst w/ render class
 //fix obstacle 2
+//another mode for the timer
