@@ -35,8 +35,8 @@ void draw()
   {
     background(0, 0, 255);
     game.bg();
-    player.player();
-    obstacle.obstacle();
+    player.render();
+    obstacle.render();
     if(diff == 2)
     {
       obstacle.obstacle2();
@@ -87,3 +87,5 @@ void keyPressed() {
 //if statement in draw function to differentiate modes
 //test1
 //this.example for obs. 
+//gameObject for player and obst w/ render class
+//fix obstacle 2

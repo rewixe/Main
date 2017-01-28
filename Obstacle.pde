@@ -1,5 +1,5 @@
-public class Obstacle {
-  public void obstacle()
+public class Obstacle extends Object {
+  public void render()
   {
     fill(255, 0, 0);
     ellipse(x[0], oy[0], rad, rad);
@@ -27,7 +27,7 @@ public class Obstacle {
   {
     for(i = 0; i < 2; i++)
     {
-      if (x[i] >= 30 && x[i] <= 60 && oy[i] >= (py) && oy[i] <= (py + 40)) 
+      if (x[i] >= 30 && x[i] <= 60 && oy[i] >= (py) && oy[i] <= (py + 45)) 
       {
         background(0);
       }
