@@ -1,7 +1,9 @@
 public class Obstacle extends Object {
+  //int oy1;
   public void render()
   {
     fill(255, 0, 0);
+    //this.oy1 = 10;
     ellipse(x[0], oy[0], rad, rad);
     x[0] += -ospeed[0];
     if (x[0] < 0)
@@ -34,3 +36,5 @@ public class Obstacle extends Object {
     }
   }
 }
+
+//make oy1 the main one
