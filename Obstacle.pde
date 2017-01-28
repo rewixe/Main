@@ -25,11 +25,11 @@ public class Obstacle {
   
   public void hit()
   {
-    for(i = 0; i < 3; i++)
+    for(i = 0; i < 2; i++)
     {
-      if (x[i] >= 30 && x[i] <= 60) 
+      if (x[i] >= 30 && x[i] <= 60 && oy[i] >= (py) && oy[i] <= (py + 40)) 
       {
-      
+        background(0);
       }
     }
   }
