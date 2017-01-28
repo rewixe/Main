@@ -25,9 +25,12 @@ public class Obstacle {
   
   public void hit()
   {
-    if (x[0] >= 30 && x[0] <= 60) 
+    for(i = 0; i < 3; i++)
     {
+      if (x[i] >= 30 && x[i] <= 60) 
+      {
       
+      }
     }
   }
 }
