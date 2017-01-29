@@ -1,27 +1,18 @@
 public class Obstacle extends Object {
-  //int oy1;
+  
+  float objY;
+  int x;
+  int objSpeed;
+  
   public void render()
   {
     fill(255, 0, 0);
-    //this.oy1 = 10;
-    ellipse(x[0], oy[0], rad, rad);
-    x[0] += -ospeed[0];
-    if (x[0] < 0)
+    ellipse(this.x, this.objY, rad, rad);
+    this.x += -ospeed;
+    if (this.x < 0)
     {
-      oy[0] = random(50, 450);
-      x[0] = 1000;
-    } 
-  }
-  
-  public void obstacle2()
-  {
-    fill(255, 0, 0);
-    ellipse(x[1], oy[1], rad, rad);
-    x[1] += -ospeed[1];
-    if (x[1] < 0)
-    {
-      oy[1] = random(50, 450);
-      x[1] = 1000;
+      this.objY = random(50, 450);
+      this.x = 1000;
     } 
   }
   
@@ -29,7 +20,7 @@ public class Obstacle extends Object {
   {
     for(i = 0; i < 2; i++)
     {
-      if (x[i] >= 30 && x[i] <= 60 && oy[i] >= (py) && oy[i] <= (py + 45)) 
+      if (obstacle.x >= 30 && obstacle.x <= 60 && obstacle.objY >= (py) && obstacle.objY <= (py + 45) || obstacle2.x >= 30 && obstacle2.x <= 60 && obstacle2.objY >= (py) && obstacle2.objY <= (py + 45)) 
       {
         background(0);
       }
