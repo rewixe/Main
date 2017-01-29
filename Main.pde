@@ -94,8 +94,5 @@ void keyPressed() {
 
 //if statement in draw function to differentiate modes
 //test1
-//this.example for obs. 
 //gameObject for player and obst w/ render class
-//fix obstacle 2
-//another mode for the timer
 //fix timer

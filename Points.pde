@@ -3,7 +3,7 @@ public class Points extends Object {
   float pntY;
   int px;
   float pntSpeed = 8.0;
-  int pntrad = 10;
+  int pntrad = 15;
   
   public void render()
   {
