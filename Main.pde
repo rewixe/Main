@@ -20,6 +20,7 @@ Player player = new Player();
 Obstacle obstacle = new Obstacle();
 Obstacle obstacle2 = new Obstacle();
 Settings settings = new Settings();
+Points point = new Points();
 
 void draw()
 {
@@ -42,6 +43,7 @@ void draw()
       game.bg();
       player.render();
       obstacle.render();
+      point.render();
       if(diff == 2)
       {
         obstacle2.render();
@@ -96,3 +98,4 @@ void keyPressed() {
 //gameObject for player and obst w/ render class
 //fix obstacle 2
 //another mode for the timer
+//fix timer
