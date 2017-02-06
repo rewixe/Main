@@ -19,4 +19,9 @@ public class Points extends Object {
     }
   }
   
+  public void hit()
+  {
+    
+  }
+  
 }

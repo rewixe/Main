@@ -8,6 +8,7 @@ abstract class Object
   }
     
   abstract void render();
+  abstract void hit();
   
 }
 

@@ -21,4 +21,9 @@ public class Bullet extends Object {
     
   }
   
+  public void hit()
+  {
+    
+  }
+  
 }

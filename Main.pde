@@ -1,8 +1,27 @@
 void setup()
 {
   size(1000,500);
+  
+  
+  Player player = new Player();
+  Obstacle obstacle = new Obstacle();
+  Obstacle2 obstacle2 = new Obstacle2();
+  Obstacle3 obstacle3 = new Obstacle3();
+  Settings settings = new Settings();
+  Points point = new Points();
+  Bullet shot = new Bullet();
+  
+  Objects.add(obstacle);
+  Objects.add(player);
+  Objects.add(point);
+  Objects.add(shot);
+  Objects.add(obstacle2);
+  Objects.add(obstacle3);
 }
 
+Game game = new Game();
+MainMenu startMenu = new MainMenu(); //creates object
+ArrayList<Object> Objects = new ArrayList<Object>();
 
 int i;
 int py = (240);
@@ -10,7 +29,7 @@ int mode = 0;
 int pspeed = 20;
 int bspeed = 10;
 int rad = 25;
-int diff = 1;
+int diff = 2;
 int timerChk = 0;
 int count;
 int timeVar = 7;
@@ -19,20 +38,14 @@ int start = millis();
 int bx = 30;
 int by;
 
-MainMenu startMenu = new MainMenu(); //creates object
-Game game = new Game();
-Player player = new Player();
-Obstacle obstacle = new Obstacle();
-Obstacle obstacle2 = new Obstacle();
-Settings settings = new Settings();
-Points point = new Points();
-Bullet shot = new Bullet();
+
 
 
 void draw()
 {
   background(255);
-    
+   
+  
   if(mode == 0)
   {
     startMenu.bg();
@@ -40,32 +53,65 @@ void draw()
     startMenu.buttons();
   }
   
+  
   if(mode == 1)
   {
-    countVar = 1;
+    
     game.bg();
-    game.timer();
+    //game.timer();
+    
     if(count <= 0)
     {
-      background(0, 0, 255);
-      game.bg();
+      for (int i = Objects.size() -1 ; i >= 0  ; i --)
+      {
+        if(diff == 1)
+        {
+          Object go = Objects.get(i); 
+          if(!(go instanceof Obstacle2 || go instanceof Obstacle3))
+          {
+            go.render();  
+            go.hit();
+          }
+        }
+        
+        if(diff == 2)
+        {
+          Object go = Objects.get(i); 
+          if(!(go instanceof Obstacle3))
+          {
+            go.render();  
+            go.hit();
+          }
+        }
+        
+        if(diff == 3)
+        {
+          Object go = Objects.get(i);
+            go.render();  
+            go.hit();
+        }
+      }
+      //background(0, 0, 255);
+      /*game.bg();
       player.render();
       shot.render();
       obstacle.render();
-      point.render();
+      point.render();*/
       if(diff == 2)
       {
-        obstacle2.render();
+        //obstacle2.render();
       }
-      obstacle.hit();
+      //obstacle.hit();
     }
   }
   
+  /*
   if(mode == 2)
   {
     startMenu.bg();
     settings.buttons();
   }
+  */
 }
 
 
@@ -101,11 +147,12 @@ void keyPressed()
       py = py + pspeed;
     } 
   }
-  
+  /*
   if(key == ' ' && mode == 1)
   {
     shot.render();
   }
+  */
 }
 
 

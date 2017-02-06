@@ -8,5 +8,10 @@ public class Player extends Object {
     rect(30, py, 30, 30);
     popStyle();
   }
+  
+  public void hit()
+  {
+    
+  }
  
 }
