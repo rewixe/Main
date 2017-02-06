@@ -7,6 +7,8 @@ public class Obstacle extends Object {
   public void render()
   {
     fill(255, 0, 0);
+    strokeWeight(2);
+    stroke(0);
     ellipse(this.x, this.objY, rad, rad);
     this.x += -ospeed;
     if (this.x < 0)

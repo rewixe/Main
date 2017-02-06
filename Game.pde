@@ -2,8 +2,8 @@ public class Game {
   public void bg()
   {
     pushStyle();
-    background(0, 191, 255);
-    stroke(156, 83, 59);
+    background(255);
+    stroke(0);
     fill(255, 0, 0);
     rect((width-width), height-30, width, height-30);
     popStyle();
@@ -14,7 +14,10 @@ public class Game {
     pushStyle();
     textSize(50);
     fill(0);
-    count = timeVar - (int ((millis()/1000)+1));
+    if(countVar == 1)
+    {
+      count = timeVar - (millis()/1000);
+    }
     text(count, width/2, height/2);
     popStyle();
   }

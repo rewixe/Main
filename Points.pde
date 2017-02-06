@@ -8,6 +8,8 @@ public class Points extends Object {
   public void render()
   {
     fill(255, 255, 0);
+    strokeWeight(2);
+    stroke(0);
     ellipse(this.px, this.pntY, pntrad, pntrad);
     this.px += -pntSpeed;
     if (this.px < 0)

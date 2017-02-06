@@ -13,7 +13,9 @@ int rad = 25;
 int diff = 1;
 int timerChk = 0;
 int count;
-int timeVar = (millis()/1000 );
+int timeVar = 7;
+int countVar = 0;
+int start = millis();
 
 MainMenu startMenu = new MainMenu(); //creates object
 Game game = new Game();
@@ -36,6 +38,7 @@ void draw()
   
   if(mode == 1)
   {
+    countVar = 1;
     game.bg();
     game.timer();
     if(count <= 0)
