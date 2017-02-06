@@ -9,6 +9,7 @@ int py = (240);
 int mode = 0;
 int pspeed = 20;
 float ospeed = 5.0;
+float bspeed = 5.0;
 int rad = 25;
 int diff = 1;
 int timerChk = 0;
@@ -16,6 +17,8 @@ int count;
 int timeVar = 7;
 int countVar = 0;
 int start = millis();
+int bx;
+int by;
 
 MainMenu startMenu = new MainMenu(); //creates object
 Game game = new Game();
