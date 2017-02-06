@@ -96,3 +96,7 @@ void keyPressed() {
 //test1
 //gameObject for player and obst w/ render class
 //fix timer
+//create bullets pshape
+//speed upgrades
+//interface
+//create bullet array, add to array

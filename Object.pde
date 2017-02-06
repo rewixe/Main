@@ -12,3 +12,5 @@ abstract class Object
   abstract void render();
   
 }
+
+//add hit as abstract class

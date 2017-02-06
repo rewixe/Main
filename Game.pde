@@ -4,7 +4,7 @@ public class Game {
     pushStyle();
     background(0, 191, 255);
     stroke(156, 83, 59);
-    fill(156, 83, 59);
+    fill(255, 0, 0);
     rect((width-width), height-30, width, height-30);
     popStyle();
   }
@@ -25,3 +25,5 @@ public class Game {
       game.timer();
       timerChk = 1;
     }*/
+    
+//set count = someVariable - (int (millis()/1000));
