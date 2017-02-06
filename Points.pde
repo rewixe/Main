@@ -23,7 +23,7 @@ public class Points extends Object {
   {
     for(i = 0; i < 2; i++)
     {
-      if (this.px >= 30 && this.px <= 60 && this.pntY >= (py) && this.pntY <= (py + 45) ) 
+      if (this.px >= 30 && this.px <= 60 && this.pntY >= (py) && this.pntY <= (py + 40) ) 
       {
         score++;
       }

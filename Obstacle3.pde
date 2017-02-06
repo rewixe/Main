@@ -22,7 +22,7 @@ public class Obstacle3 extends Object {
   {
     for(i = 0; i < 2; i++)
     {
-      if (this.x3 >= 30 && this.x3 <= 60 && this.objY3 >= (py) && this.objY3 <= (py + 45) /*|| obstacle2.x >= 30 && obstacle2.x <= 60 && obstacle2.objY >= (py) && obstacle2.objY <= (py + 45)*/) 
+      if (this.x3 >= 30 && this.x3 <= 60 && this.objY3 >= (py) && this.objY3 <= (py + 45) ) 
       {
         score--;
       }

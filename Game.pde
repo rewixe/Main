@@ -10,6 +10,7 @@ public class Game {
     fill(0);
     textSize(45);
     text("S C O R E : ", 40, 490);
+    text(score, 350, 490);
     popStyle();
   }
   

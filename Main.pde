@@ -38,8 +38,11 @@ int start = millis();
 int bx = 30;
 int by;
 int score = 0;
-
-
+float fireRate = 1;
+float toPass = 1.0 / fireRate;
+float elapsed = toPass;
+float timeDelta = 1.0f / 60.0f;
+int ammo = 100;
 
 
 void draw()
@@ -91,6 +94,15 @@ void draw()
             go.render();  
             go.hit();
         }
+        
+        if(key == ' ' && elapsed > toPass)
+        {
+          Bullet shot = new Bullet();
+          Objects.add(shot);
+          elapsed = 0;
+        }
+        
+        elapsed += timeDelta;
       }
     }
   }
