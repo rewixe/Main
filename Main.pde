@@ -8,8 +8,7 @@ int i;
 int py = (240);
 int mode = 0;
 int pspeed = 20;
-float ospeed = 5.0;
-float bspeed = 5.0;
+int bspeed = 10;
 int rad = 25;
 int diff = 1;
 int timerChk = 0;
@@ -27,11 +26,13 @@ Obstacle obstacle = new Obstacle();
 Obstacle obstacle2 = new Obstacle();
 Settings settings = new Settings();
 Points point = new Points();
+Bullet shot = new Bullet();
+
 
 void draw()
 {
   background(255);
-  
+    
   if(mode == 0)
   {
     startMenu.bg();
@@ -49,6 +50,7 @@ void draw()
       background(0, 0, 255);
       game.bg();
       player.render();
+      shot.render();
       obstacle.render();
       point.render();
       if(diff == 2)
@@ -100,11 +102,12 @@ void keyPressed()
     } 
   }
   
-  if(key == ' ')
+  if(key == ' ' && mode == 1)
   {
-    background(0);
+    shot.render();
   }
 }
+
 
 //change settings screen
 //if statement in draw function to differentiate modes

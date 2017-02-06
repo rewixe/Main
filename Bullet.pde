@@ -1,8 +1,8 @@
 public class Bullet extends Object {
   
-  int bx;
-  int by = py;
-  int bspeed;
+  float by = py + 15;
+  int bx = 60;
+  int bspeed = 5;
   
   public void render()
   {
@@ -10,11 +10,12 @@ public class Bullet extends Object {
     fill(0);
     strokeWeight(1);
     stroke(0);
-    rect(bx, by, 5, 3);
+    rect(this.bx, this.by, 5, 3);
     this.bx += bspeed;
     if (this.bx > width)
     {
-      this.by = 1500;
+      this.bx = 60;
+      this.by = py + 15;
     }
     popStyle();
     

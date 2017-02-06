@@ -2,7 +2,7 @@ public class Obstacle extends Object {
   
   float objY;
   int x;
-  int objSpeed;
+  int objSpeed = 10;
   
   public void render()
   {
@@ -10,7 +10,7 @@ public class Obstacle extends Object {
     strokeWeight(2);
     stroke(0);
     ellipse(this.x, this.objY, rad, rad);
-    this.x += -ospeed;
+    this.x += -objSpeed;
     if (this.x < 0)
     {
       this.objY = random(50, 450);
