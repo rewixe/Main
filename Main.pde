@@ -3,7 +3,7 @@ void setup()
   size(1000,500);
   
   
-  Player player = new Player();
+  Player player = new Player(' ');
   Obstacle obstacle = new Obstacle();
   Obstacle2 obstacle2 = new Obstacle2();
   Obstacle3 obstacle3 = new Obstacle3();
@@ -22,6 +22,7 @@ void setup()
 Game game = new Game();
 MainMenu startMenu = new MainMenu(); //creates object
 ArrayList<Object> Objects = new ArrayList<Object>();
+boolean[] keys = new boolean[1000];
 
 int i;
 int py = (240);
@@ -29,7 +30,7 @@ int mode = 0;
 int pspeed = 20;
 int bspeed = 10;
 int rad = 25;
-int diff = 2;
+int diff = 3;
 int timerChk = 0;
 int count;
 int timeVar = 7;
@@ -38,11 +39,8 @@ int start = millis();
 int bx = 30;
 int by;
 int score = 0;
-float fireRate = 1;
-float toPass = 1.0 / fireRate;
-float elapsed = toPass;
 float timeDelta = 1.0f / 60.0f;
-int ammo = 100;
+int ammo = 10;
 
 
 void draw()
@@ -75,6 +73,10 @@ void draw()
           {
             go.render();  
             go.hit();
+            if(go instanceof Bullet && this.bx > width)
+            {
+              Objects.remove(go);
+            }
           }
         }
         
@@ -95,14 +97,14 @@ void draw()
             go.hit();
         }
         
-        if(key == ' ' && elapsed > toPass)
+        /*if(key == ' ' && elapsed > toPass && ammo > 0)
         {
           Bullet shot = new Bullet();
           Objects.add(shot);
           elapsed = 0;
-        }
-        
-        elapsed += timeDelta;
+          ammo--;
+        }*/
+       
       }
     }
   }
@@ -155,6 +157,24 @@ void keyPressed()
     shot.render();
   }
   */
+  { 
+    keys[keyCode] = true;
+  }
+
+}
+ 
+void keyReleased()
+{
+  keys[keyCode] = false; 
+}
+
+boolean checkKey(int k)
+{
+  if (keys.length >= k) 
+  {
+    return keys[k] || keys[Character.toUpperCase(k)];  
+  }
+  return false;
 }
 
 
@@ -167,3 +187,5 @@ void keyPressed()
 //speed upgrades
 //interface
 //create bullet array, add to array
+//remove bullets when offscreen
+//why does .remove work in all diffs despite only being in one

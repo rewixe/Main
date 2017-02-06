@@ -3,6 +3,7 @@ public class Bullet extends Object {
   float by = py + 15;
   int bx = 60;
   int bspeed = 5;
+
   
   public void render()
   {
@@ -14,8 +15,8 @@ public class Bullet extends Object {
     this.bx += bspeed;
     if (this.bx > width)
     {
-      this.bx = 60;
-      this.by = py + 15;
+      /*this.bx = 60;
+      this.by = py + 15;*/
     }
     popStyle();
     
