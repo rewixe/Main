@@ -10,9 +10,10 @@ int mode = 0;
 int pspeed = 20;
 float ospeed = 5.0;
 int rad = 25;
-int diff = 2;
+int diff = 1;
 int timerChk = 0;
 int count;
+int timeVar = (millis()/1000 );
 
 MainMenu startMenu = new MainMenu(); //creates object
 Game game = new Game();
@@ -92,6 +93,7 @@ void keyPressed() {
   }
 }
 
+//change settings screen
 //if statement in draw function to differentiate modes
 //test1
 //gameObject for player and obst w/ render class

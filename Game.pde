@@ -14,7 +14,7 @@ public class Game {
     pushStyle();
     textSize(50);
     fill(0);
-    count = 7 - (int (millis()/1000));
+    count = timeVar - (int ((millis()/1000)+1));
     text(count, width/2, height/2);
     popStyle();
   }
