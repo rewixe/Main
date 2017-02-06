@@ -13,7 +13,7 @@ public class Obstacle extends Object {
     this.x1 += -objSpeed1;
     if (this.x1 < 0)
     {
-      this.objY1 = random(50, 450);
+      this.objY1 = random(50, 420);
       this.x1 = 1000;
     } 
   }
@@ -24,7 +24,7 @@ public class Obstacle extends Object {
     {
       if (this.x1 >= 30 && this.x1 <= 60 && this.objY1 >= (py) && this.objY1 <= (py + 45) /*|| obstacle2.x >= 30 && obstacle2.x <= 60 && obstacle2.objY >= (py) && obstacle2.objY <= (py + 45)*/) 
       {
-        background(0);
+        score--;
       }
     }
   }

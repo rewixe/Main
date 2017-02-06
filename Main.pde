@@ -33,10 +33,11 @@ int diff = 2;
 int timerChk = 0;
 int count;
 int timeVar = 7;
-int countVar = 0;
+int countVar = 1;
 int start = millis();
 int bx = 30;
 int by;
+int score = 0;
 
 
 
@@ -58,7 +59,7 @@ void draw()
   {
     
     game.bg();
-    //game.timer();
+    game.timer();
     
     if(count <= 0)
     {
@@ -91,17 +92,6 @@ void draw()
             go.hit();
         }
       }
-      //background(0, 0, 255);
-      /*game.bg();
-      player.render();
-      shot.render();
-      obstacle.render();
-      point.render();*/
-      if(diff == 2)
-      {
-        //obstacle2.render();
-      }
-      //obstacle.hit();
     }
   }
   
@@ -142,7 +132,7 @@ void keyPressed()
     { 
       py = py - pspeed;
     } 
-    else if (keyCode == DOWN && py < (height-60) && mode == 1) 
+    else if (keyCode == DOWN && py < (height-80) && mode == 1) 
     {
       py = py + pspeed;
     } 

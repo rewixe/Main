@@ -21,7 +21,13 @@ public class Points extends Object {
   
   public void hit()
   {
-    
+    for(i = 0; i < 2; i++)
+    {
+      if (this.px >= 30 && this.px <= 60 && this.pntY >= (py) && this.pntY <= (py + 45) ) 
+      {
+        score++;
+      }
+    }
   }
   
 }
