@@ -17,7 +17,7 @@ int count;
 int timeVar = 7;
 int countVar = 0;
 int start = millis();
-int bx;
+int bx = 30;
 int by;
 
 MainMenu startMenu = new MainMenu(); //creates object
@@ -86,8 +86,10 @@ void mouseClicked()
   
 }
 
-void keyPressed() {
-  if (key == CODED) {
+void keyPressed() 
+{
+  if (key == CODED) 
+  {
     if (keyCode == UP && py > 0 && mode == 1) 
     { 
       py = py - pspeed;
@@ -96,6 +98,11 @@ void keyPressed() {
     {
       py = py + pspeed;
     } 
+  }
+  
+  if(key == ' ')
+  {
+    background(0);
   }
 }
 

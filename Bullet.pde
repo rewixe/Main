@@ -1,7 +1,7 @@
 public class Bullet extends Object {
   
   int bx;
-  int by;
+  int by = py;
   int bspeed;
   
   public void render()
@@ -12,7 +12,7 @@ public class Bullet extends Object {
     stroke(0);
     rect(bx, by, 5, 3);
     this.bx += bspeed;
-    if (this.bx >  width)
+    if (this.bx > width)
     {
       this.by = 1500;
     }
