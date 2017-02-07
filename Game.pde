@@ -31,7 +31,7 @@ public class Game {
     popStyle();
   }
   
-  public void level()
+  public void level1()
   {
     pushStyle();
     textSize(50);
@@ -39,5 +39,6 @@ public class Game {
     text("LEVEL ONE", 700, 490);
     popStyle();
     
+    objSpeed = 5;
   }
 }

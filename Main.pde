@@ -68,7 +68,11 @@ void draw()
     
     if(count <= 0)
     {
-      game.level();
+      if(score <= 100)
+      {
+        game.level1();
+      }
+      
       for (int i = Objects.size() -1 ; i >= 0  ; i --)
       {
         if(diff == 1)
