@@ -1,12 +1,14 @@
 public class Player extends Object {
   
-  float fireRate = 6;
+  float fireRate = 10;
   float toPass = 1.0 / fireRate;
   float elapsed = toPass;
-  char fire;
+  char up, down, fire;
   
-  Player(char fire)
+  Player(char up, char down, char fire)
   {
+    this.up = up;
+    this.down = down;
     this.fire = fire;
   }
   
@@ -27,6 +29,17 @@ public class Player extends Object {
       ammo--;
     }
     
+    if(checkKey(up) && py > 0 && mode == 1)
+    {
+      py = py - pspeed;
+    }
+    
+    if(checkKey(down) && py < (height-80) && mode == 1)
+    {
+      py = py + pspeed;
+    }
+    
+    
     elapsed += timeDelta;
     
     
@@ -35,7 +48,7 @@ public class Player extends Object {
   
   public void hit()
   {
-    
+  
   }
  
 }

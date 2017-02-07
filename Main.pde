@@ -3,7 +3,7 @@ void setup()
   size(1000,500);
   
   
-  Player player = new Player(' ');
+  Player player = new Player('w', 's', ' ');
   Obstacle obstacle = new Obstacle();
   Obstacle2 obstacle2 = new Obstacle2();
   Obstacle3 obstacle3 = new Obstacle3();
@@ -27,7 +27,7 @@ boolean[] keys = new boolean[1000];
 int i;
 int py = (240);
 int mode = 0;
-int pspeed = 20;
+int pspeed = 10;
 int bspeed = 10;
 int rad = 25;
 int diff = 3;
@@ -36,17 +36,20 @@ int count;
 int timeVar = 7;
 int countVar = 1;
 int start = millis();
-int bx = 30;
 int by;
+int bx = 60;
+int objY1, objY2, objY3;
+int x1, x2, x3;
 float score = 0.0;
 float timeDelta = 1.0f / 60.0f;
-int ammo = 10;
+int ammo = 100;
+
 
 
 void draw()
 {
   background(255);
-   
+
   
   if(mode == 0)
   {
@@ -58,6 +61,7 @@ void draw()
   
   if(mode == 1)
   {
+
     
     game.bg();
     game.timer();
@@ -68,7 +72,7 @@ void draw()
       {
         if(diff == 1)
         {
-          Object go = Objects.get(i); 
+          Object go = Objects.get(i);
           if(!(go instanceof Obstacle2 || go instanceof Obstacle3))
           {
             go.render();  
@@ -96,16 +100,9 @@ void draw()
             go.render();  
             go.hit();
         }
-        
-        /*if(key == ' ' && elapsed > toPass && ammo > 0)
-        {
-          Bullet shot = new Bullet();
-          Objects.add(shot);
-          elapsed = 0;
-          ammo--;
-        }*/
        
       }
+      
     }
   }
   
@@ -140,23 +137,7 @@ void mouseClicked()
 
 void keyPressed() 
 {
-  if (key == CODED) 
-  {
-    if (keyCode == UP && py > 0 && mode == 1) 
-    { 
-      py = py - pspeed;
-    } 
-    else if (keyCode == DOWN && py < (height-80) && mode == 1) 
-    {
-      py = py + pspeed;
-    } 
-  }
-  /*
-  if(key == ' ' && mode == 1)
-  {
-    shot.render();
-  }
-  */
+
   { 
     keys[keyCode] = true;
   }
