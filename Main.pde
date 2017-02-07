@@ -151,17 +151,17 @@ void mouseClicked()
   
   if(mode == 2 && mouseX > 580 && mouseX < 630 && mouseY > 180 && mouseY < 230)
   {
-    diff = 1; 
+    pspeed = 5; 
   }
   
   if(mode == 2 && mouseX > 650 && mouseX < 700 && mouseY > 180 && mouseY < 230)
   {
-    diff = 2; 
+    pspeed = 10; 
   }
   
   if(mode == 2 && mouseX > 720 && mouseX < 770 && mouseY > 180 && mouseY < 230)
   {
-    diff = 3; 
+    pspeed = 15; 
   }
   
   
