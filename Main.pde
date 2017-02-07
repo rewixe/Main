@@ -5,8 +5,8 @@ void setup()
   
   Player player = new Player('w', 's', ' ');
   Obstacle obstacle = new Obstacle();
-  Obstacle obstacle2 = new Obstacle();
-  Obstacle obstacle3 = new Obstacle();
+  Obstacle2 obstacle2 = new Obstacle2();
+  Obstacle3 obstacle3 = new Obstacle3();
   Points point = new Points();
   Bullet shot = new Bullet();
   
@@ -18,11 +18,19 @@ void setup()
   Objects.add(obstacle3);
 }
 
+  
+
+Bullet shot = new Bullet();
+Obstacle obstacle = new Obstacle();
+Obstacle2 obstacle2 = new Obstacle2();
+Obstacle3 obstacle3 = new Obstacle3();
 Game game = new Game();
 Settings settings = new Settings();
 MainMenu startMenu = new MainMenu(); //creates object
+
 ArrayList<Object> Objects = new ArrayList<Object>();
 boolean[] keys = new boolean[1000];
+ 
 
 
 int py = (240);
@@ -30,7 +38,7 @@ int mode = 0;
 int pspeed = 7;
 int bspeed = 10;
 int rad = 25;
-int diff = 3;
+int diff = 2;
 int count;
 int timeVar = 7;
 int countVar = 1;
@@ -46,7 +54,7 @@ void draw()
 {
   background(255);
 
-  
+
   if(mode == 0)
   {
     startMenu.bg();
@@ -64,6 +72,7 @@ void draw()
     
     if(count <= 0)
     {
+      
       if(score < 200)
       {
         game.level1();
@@ -86,11 +95,19 @@ void draw()
       
       if(score >= 800 && score < 1000)
       {
-        game.level5();
+            
+      for (int i = Objects.size() -1 ; i >= 0  ; i --)
+      {
+        Object go = Objects.get(i);
+        if(go instanceof Bullet && this.bx == obstacle2.x2)
+        {
+          background(0);
+          delay(5);
+        }
+      }  game.level5();
       }
       
-      
-      
+
       
       
       for (int i = Objects.size() -1 ; i >= 0  ; i --)
@@ -141,12 +158,15 @@ void draw()
   if(score > 1000)
   {
         game.victory();
+       
   }
   
   if(score < -100)
   {
         game.over();
+         
   }
+
   
 }
 
