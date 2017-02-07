@@ -5,8 +5,8 @@ void setup()
   
   Player player = new Player('w', 's', ' ');
   Obstacle obstacle = new Obstacle();
-  Obstacle2 obstacle2 = new Obstacle2();
-  Obstacle3 obstacle3 = new Obstacle3();
+  Obstacle obstacle2 = new Obstacle();
+  Obstacle obstacle3 = new Obstacle();
   Points point = new Points();
   Bullet shot = new Bullet();
   
@@ -30,7 +30,7 @@ int mode = 0;
 int pspeed = 7;
 int bspeed = 10;
 int rad = 25;
-int diff = 1;
+int diff = 3;
 int count;
 int timeVar = 7;
 int countVar = 1;
