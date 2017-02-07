@@ -38,7 +38,7 @@ int countVar = 1;
 int start = millis();
 int bx = 30;
 int by;
-int score = 0;
+float score = 0.0;
 float timeDelta = 1.0f / 60.0f;
 int ammo = 10;
 

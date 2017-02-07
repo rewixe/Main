@@ -25,7 +25,7 @@ public class Points extends Object {
     {
       if (this.px >= 30 && this.px <= 60 && this.pntY >= (py) && this.pntY <= (py + 40) ) 
       {
-        score++;
+        score = score + 0.125;
         ammo++;
       }
     }
