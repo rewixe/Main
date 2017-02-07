@@ -24,13 +24,13 @@ MainMenu startMenu = new MainMenu(); //creates object
 ArrayList<Object> Objects = new ArrayList<Object>();
 boolean[] keys = new boolean[1000];
 
-int i;
+
 int py = (240);
 int mode = 0;
 int pspeed = 10;
 int bspeed = 10;
 int rad = 25;
-int diff = 3;
+int diff = 1;
 int timerChk = 0;
 int count;
 int timeVar = 7;

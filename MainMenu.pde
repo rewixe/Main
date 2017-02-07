@@ -3,7 +3,7 @@ PFont myFont;
 public class MainMenu {
   public void bg()
   {
-    for(i = 0; i < height; i += 10)
+    for(int i = 0; i < height; i += 10)
     {
       stroke(255,0,0);
       line(0, i, width, i);

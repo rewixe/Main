@@ -20,7 +20,7 @@ public class Obstacle extends Object {
   
   public void hit()
   {
-    for(i = 0; i < 2; i++)
+    for(int i = 0; i < 2; i++)
     {
       if (this.x1 >= 30 && this.x1 <= 60 && this.objY1 >= (py) && this.objY1 <= (py + 45) ) 
       {
