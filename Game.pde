@@ -47,9 +47,20 @@ public class Game {
     pushStyle();
     textSize(50);
     fill(0);
-    text("LEVEL ONE", 700, 490);
+    text("LEVEL TWO", 700, 490);
     popStyle();
     
     objSpeed = 10;
+  }
+  
+  public void level3()
+  {
+    pushStyle();
+    textSize(50);
+    fill(0);
+    text("LEVEL THREE", 700, 490);
+    popStyle();
+    
+    objSpeed = 15;
   }
 }

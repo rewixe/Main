@@ -78,6 +78,11 @@ void draw()
         game.level2();
       }
       
+      if(score > 300 && score < 400)
+      {
+        game.level3();
+      }
+      
       for (int i = Objects.size() -1 ; i >= 0  ; i --)
       {
         if(diff == 1)
