@@ -149,6 +149,23 @@ void mouseClicked()
     diff = 3; 
   }
   
+  if(mode == 2 && mouseX > 580 && mouseX < 630 && mouseY > 180 && mouseY < 230)
+  {
+    diff = 1; 
+  }
+  
+  if(mode == 2 && mouseX > 650 && mouseX < 700 && mouseY > 180 && mouseY < 230)
+  {
+    diff = 2; 
+  }
+  
+  if(mode == 2 && mouseX > 720 && mouseX < 770 && mouseY > 180 && mouseY < 230)
+  {
+    diff = 3; 
+  }
+  
+  
+  
 }
 
 void keyPressed() 
