@@ -63,4 +63,15 @@ public class Game {
     
     objSpeed = 15;
   }
+  
+  public void level4()
+  {
+    pushStyle();
+    textSize(50);
+    fill(0);
+    text("LEVEL FOUR", 700, 490);
+    popStyle();
+    
+    objSpeed = 20;
+  }
 }
