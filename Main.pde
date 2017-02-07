@@ -7,7 +7,6 @@ void setup()
   Obstacle obstacle = new Obstacle();
   Obstacle2 obstacle2 = new Obstacle2();
   Obstacle3 obstacle3 = new Obstacle3();
-  Settings settings = new Settings();
   Points point = new Points();
   Bullet shot = new Bullet();
   
@@ -20,6 +19,7 @@ void setup()
 }
 
 Game game = new Game();
+Settings settings = new Settings();
 MainMenu startMenu = new MainMenu(); //creates object
 ArrayList<Object> Objects = new ArrayList<Object>();
 boolean[] keys = new boolean[1000];
@@ -106,13 +106,13 @@ void draw()
     }
   }
   
-  /*
+  
   if(mode == 2)
   {
     startMenu.bg();
     settings.buttons();
   }
-  */
+  
 }
 
 
@@ -126,6 +126,11 @@ void mouseClicked()
   if(mode == 0 && mouseX > 365 && mouseX < 635 && mouseY > 340 && mouseY < 410)
   {
     mode = 2; 
+  }
+  
+  if(mode == 2 && mouseX > 400 && mouseX < 600 && mouseY > 400 && mouseY < 450)
+  {
+    mode = 0; 
   }
   
   if(mode == 2 && mouseX > 400 && mouseX < 600 && mouseY > 400 && mouseY < 450)

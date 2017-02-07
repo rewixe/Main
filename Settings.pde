@@ -9,8 +9,32 @@ public class Settings {
     myFont = createFont(fontName, 50);
     textFont(myFont);
     strokeWeight(3);
+    
+    //SETTINGS BARS
     rect(180, 100, 340, 50, 20);
     rect(180, 180, 340, 50, 20);
+    
+    //BUTTONS 1, 2, 3
+    rect(580, 100, 50, 50, 20);
+    rect(650, 100, 50, 50, 20);
+    rect(720, 100, 50, 50, 20);
+    
+    rect(580, 180, 50, 50, 20);
+    rect(650, 180, 50, 50, 20);
+    rect(720, 180, 50, 50, 20);
+    
+    pushStyle();
+    textSize(20);
+    fill(255, 0, 0);
+    text("1", 605, 125);
+    text("2", 675, 125);
+    text("3", 745, 125);
+    text("1", 605, 205);
+    text("2", 675, 205);
+    text("3", 745, 205);
+    popStyle();
+
+    
     rect((width/2)-100, 400, 200, 50, 20);
     fill(255, 0, 0);
     strokeWeight(10);
