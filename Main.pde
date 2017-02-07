@@ -133,9 +133,20 @@ void mouseClicked()
     mode = 0; 
   }
   
-  if(mode == 2 && mouseX > 400 && mouseX < 600 && mouseY > 400 && mouseY < 450)
+  //SETTINGS
+  if(mode == 2 && mouseX > 580 && mouseX < 630 && mouseY > 100 && mouseY < 150)
   {
-    mode = 0; 
+    diff = 1; 
+  }
+  
+  if(mode == 2 && mouseX > 650 && mouseX < 700 && mouseY > 100 && mouseY < 150)
+  {
+    diff = 2; 
+  }
+  
+  if(mode == 2 && mouseX > 720 && mouseX < 770 && mouseY > 100 && mouseY < 150)
+  {
+    diff = 3; 
   }
   
 }
