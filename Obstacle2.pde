@@ -1,7 +1,6 @@
-public class Obstacle2 extends Object {
+public class Obstacle2 extends Bullet {
   
-  float objY2;
-  int x2;
+  
   
   public void render()
   {
@@ -26,5 +25,20 @@ public class Obstacle2 extends Object {
         score--;
       }
     }
+    
+    
+    for (int i = Objects.size() -1 ; i >= 0  ; i --)
+    {
+      Object go = Objects.get(i);
+      if(go instanceof Bullet)
+      {
+        if(this.x2 == shot.bx && this.objY2 == shot.by)
+        {
+          score++;
+        }
+      }
+    }
+    
+    
   }
 }

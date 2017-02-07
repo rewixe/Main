@@ -2,7 +2,7 @@ void setup()
 {
   size(1000,500);
   
-  
+  //Create instances of objects
   Player player = new Player('w', 's', ' ');
   Obstacle obstacle = new Obstacle();
   Obstacle2 obstacle2 = new Obstacle2();
@@ -10,6 +10,7 @@ void setup()
   Points point = new Points();
   Bullet shot = new Bullet();
   
+  //Adding objects to object array
   Objects.add(obstacle);
   Objects.add(player);
   Objects.add(point);
@@ -28,11 +29,12 @@ Game game = new Game();
 Settings settings = new Settings();
 MainMenu startMenu = new MainMenu(); //creates object
 
+//Object array
 ArrayList<Object> Objects = new ArrayList<Object>();
 boolean[] keys = new boolean[1000];
  
 
-
+//Variables
 int py = (240);
 int mode = 0;
 int pspeed = 7;
@@ -54,7 +56,7 @@ void draw()
 {
   background(255);
 
-
+  //Settings screen
   if(mode == 0)
   {
     startMenu.bg();
@@ -62,17 +64,19 @@ void draw()
     startMenu.buttons();
   }
   
-  
+  //Game mode
   if(mode == 1)
   {
 
-    
+    //Game setup
     game.bg();
     game.timer();
     
+    //Begin game
     if(count <= 0)
     {
       
+      //Levels
       if(score < 200)
       {
         game.level1();
@@ -95,23 +99,15 @@ void draw()
       
       if(score >= 800 && score < 1000)
       {
-            
-      for (int i = Objects.size() -1 ; i >= 0  ; i --)
-      {
-        Object go = Objects.get(i);
-        if(go instanceof Bullet && this.bx == obstacle2.x2)
-        {
-          background(0);
-          delay(5);
-        }
-      }  game.level5();
+        game.level5();
       }
       
 
       
-      
+      //Finding bullets in object array, removing if they go beyond width of the  screen
       for (int i = Objects.size() -1 ; i >= 0  ; i --)
       {
+        //difficulty one
         if(diff == 1)
         {
           Object go = Objects.get(i);
@@ -126,6 +122,7 @@ void draw()
           }
         }
         
+        //difficulty two
         if(diff == 2)
         {
           Object go = Objects.get(i); 
@@ -136,6 +133,7 @@ void draw()
           }
         }
         
+        //difficulty three
         if(diff == 3)
         {
           Object go = Objects.get(i);
@@ -148,19 +146,21 @@ void draw()
     }
   }
   
-  
+  //Settings mode
   if(mode == 2)
   {
     startMenu.bg();
     settings.buttons();
   }
   
+  //Victory screen
   if(score > 1000)
   {
         game.victory();
        
   }
   
+  //Game over screen
   if(score < -100)
   {
         game.over();
@@ -173,6 +173,7 @@ void draw()
 
 void mouseClicked()
 {
+  //Buttons
   if(mode == 0 && mouseX > 365 && mouseX < 635 && mouseY > 250 && mouseY < 320)
   {
     mode = 1; 
@@ -225,7 +226,7 @@ void mouseClicked()
 
 void keyPressed() 
 {
-
+  //Which keys are pressed
   { 
     keys[keyCode] = true;
   }
@@ -234,6 +235,7 @@ void keyPressed()
  
 void keyReleased()
 {
+  //Which keys are no longer pressed
   keys[keyCode] = false; 
 }
 
@@ -245,16 +247,3 @@ boolean checkKey(int k)
   }
   return false;
 }
-
-
-//change settings screen
-//if statement in draw function to differentiate modes
-//test1
-//gameObject for player and obst w/ render class
-//fix timer
-//create bullets pshape
-//speed upgrades
-//interface
-//create bullet array, add to array
-//remove bullets when offscreen
-//why does .remove work in all diffs despite only being in one

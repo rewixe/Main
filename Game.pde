@@ -1,4 +1,6 @@
 public class Game {
+  
+  //Background
   public void bg()
   {
     pushStyle();
@@ -14,6 +16,7 @@ public class Game {
     popStyle();
   }
   
+  //countown timer
   public void timer()
   {
     pushStyle();
@@ -31,6 +34,7 @@ public class Game {
     popStyle();
   }
   
+  //Levels
   public void level1()
   {
     pushStyle();
@@ -86,6 +90,7 @@ public class Game {
     objSpeed = 23;
   }
   
+  //Victory screen method
   public void victory()
   {
     pushStyle();
@@ -98,6 +103,7 @@ public class Game {
     objSpeed = 23;
   }
   
+  //game over screen method
   public void over()
   {
     pushStyle();

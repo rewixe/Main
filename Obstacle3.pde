@@ -1,7 +1,6 @@
-public class Obstacle3 extends Object {
+public class Obstacle3 extends Bullet {
   
-  float objY3;
-  int x3;
+ 
   
   public void render()
   {
@@ -24,6 +23,19 @@ public class Obstacle3 extends Object {
       if (this.x3 >= 30 && this.x3 <= 60 && this.objY3 >= (py) && this.objY3 <= (py + 50) ) 
       {
         score--;
+      }
+    }
+    
+    
+    for (int i = Objects.size() -1 ; i >= 0  ; i --)
+    {
+      Object go = Objects.get(i);
+      if(go instanceof Bullet)
+      {
+        if(this.x3 == shot.bx && this.objY3 == shot.by)
+        {
+          score++;
+        }
       }
     }
   }
