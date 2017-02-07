@@ -21,7 +21,7 @@ public class Obstacle2 extends Object {
   {
     for(int i = 0; i < 2; i++)
     {
-      if (this.x2 >= 30 && this.x2 <= 60 && this.objY2 >= (py) && this.objY2 <= (py + 45) ) 
+      if (this.x2 >= 30 && this.x2 <= 60 && this.objY2 >= (py) && this.objY2 <= (py + 50) ) 
       {
         score--;
       }
