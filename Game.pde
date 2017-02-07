@@ -85,4 +85,16 @@ public class Game {
     
     objSpeed = 23;
   }
+  
+  public void victory()
+  {
+    pushStyle();
+    textSize(60);
+    fill(0);
+    background(255, 0, 0);
+    text("Y O U   W O N!", 300, height/2);
+    popStyle();
+    
+    objSpeed = 23;
+  }
 }

@@ -93,6 +93,10 @@ void draw()
         game.level5();
       }
       
+      
+      
+      
+      
       for (int i = Objects.size() -1 ; i >= 0  ; i --)
       {
         if(diff == 1)
@@ -136,6 +140,11 @@ void draw()
   {
     startMenu.bg();
     settings.buttons();
+  }
+  
+  if(score > 1000)
+  {
+        game.victory();
   }
   
 }
