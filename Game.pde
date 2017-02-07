@@ -36,7 +36,8 @@ public class Game {
     pushStyle();
     textSize(50);
     fill(0);
-    text("LEVEL ONE", 700, 400);
+    text("LEVEL ONE", 700, 490);
     popStyle();
+    
   }
 }

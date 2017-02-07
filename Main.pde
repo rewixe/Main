@@ -38,7 +38,7 @@ int countVar = 1;
 int start = millis();
 int by;
 int bx = 60;
-int objY1, objY2, objY3;
+int objSpeed = 5;
 int x1, x2, x3;
 float score = 0.0;
 float timeDelta = 1.0f / 60.0f;
