@@ -97,4 +97,16 @@ public class Game {
     
     objSpeed = 23;
   }
+  
+  public void over()
+  {
+    pushStyle();
+    textSize(60);
+    fill(0);
+    background(255, 0, 0);
+    text("G A M E  O V E R", 270, height/2);
+    popStyle();
+    
+    objSpeed = 23;
+  }
 }

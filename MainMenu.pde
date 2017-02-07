@@ -20,7 +20,7 @@ public class MainMenu {
     myFont = createFont(fontName, 50);
     textFont(myFont);
     String txt1 = "Welcome to";
-    String txt2 = "The Jump Game!";
+    String txt2 = "The Dodge Game";
     text(txt1, width/2, (height/2)-120);
     text(txt2, width/2, (height/2)-70); 
     popStyle();

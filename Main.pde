@@ -143,6 +143,11 @@ void draw()
         game.victory();
   }
   
+  if(score < -100)
+  {
+        game.over();
+  }
+  
 }
 
 
