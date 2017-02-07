@@ -27,19 +27,15 @@ boolean[] keys = new boolean[1000];
 
 int py = (240);
 int mode = 0;
-int pspeed = 10;
+int pspeed = 7;
 int bspeed = 10;
 int rad = 25;
 int diff = 1;
-int timerChk = 0;
 int count;
 int timeVar = 7;
 int countVar = 1;
-int start = millis();
-int by;
 int bx = 60;
 int objSpeed = 5;
-int x1, x2, x3;
 float score = 0.0;
 float timeDelta = 1.0f / 60.0f;
 int ammo = 100;
@@ -68,22 +64,22 @@ void draw()
     
     if(count <= 0)
     {
-      if(score <= 200)
+      if(score < 200)
       {
         game.level1();
       }
       
-      if(score > 200 && score < 300)
+      if(score >= 200 && score < 300)
       {
         game.level2();
       }
       
-      if(score > 300 && score < 500)
+      if(score >= 300 && score < 500)
       {
         game.level3();
       }
       
-      if(score > 500 && score < 800)
+      if(score >= 500 && score < 800)
       {
         game.level4();
       }

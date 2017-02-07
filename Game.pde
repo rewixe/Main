@@ -92,7 +92,7 @@ public class Game {
     textSize(60);
     fill(0);
     background(255, 0, 0);
-    text("Y O U   W O N!", 300, height/2);
+    text("Y O U   W O N!", 270, height/2);
     popStyle();
     
     objSpeed = 23;
