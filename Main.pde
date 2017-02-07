@@ -68,6 +68,7 @@ void draw()
     
     if(count <= 0)
     {
+      game.level();
       for (int i = Objects.size() -1 ; i >= 0  ; i --)
       {
         if(diff == 1)

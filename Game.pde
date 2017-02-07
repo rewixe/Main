@@ -30,12 +30,13 @@ public class Game {
     text(count, width/2, height/2);
     popStyle();
   }
+  
+  public void level()
+  {
+    pushStyle();
+    textSize(50);
+    fill(0);
+    text("LEVEL ONE", 700, 400);
+    popStyle();
+  }
 }
-
-/*if(timerChk == 0)
-    {
-      game.timer();
-      timerChk = 1;
-    }*/
-    
-//set count = someVariable - (int (millis()/1000));
