@@ -5,6 +5,7 @@ public class Player extends Object {
   float elapsed = toPass;
   char up, down, fire;
   
+  //controls
   Player(char up, char down, char fire)
   {
     this.up = up;
@@ -12,6 +13,7 @@ public class Player extends Object {
     this.fire = fire;
   }
   
+  //render player
   public void render()
   {
     pushStyle();
@@ -21,6 +23,7 @@ public class Player extends Object {
     rect(30, py, 30, 30);
     popStyle();
     
+    //fire bullets
     if(checkKey(fire) && elapsed > toPass && ammo > 0)
     {
       Bullet shot = new Bullet();
@@ -29,6 +32,8 @@ public class Player extends Object {
       ammo--;
     }
     
+    
+    //movements
     if(checkKey(up) && py > 0 && mode == 1)
     {
       py = py - pspeed;

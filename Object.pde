@@ -1,4 +1,4 @@
-abstract class Object
+abstract class Object //abstract class
 {
   int x1, x2, x3;
   float objY1, objY2, objY3;
@@ -9,10 +9,10 @@ abstract class Object
   {
     
   }
-    
+  
+ 
+  //abstract methods   
   abstract void render();
   abstract void hit();
   
 }
-
-//add hit as abstract class

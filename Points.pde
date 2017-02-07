@@ -5,6 +5,7 @@ public class Points extends Object {
   float pntSpeed = 8.0;
   int pntrad = 15;
   
+  //create points
   public void render()
   {
     fill(255, 255, 0);

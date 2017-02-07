@@ -1,7 +1,7 @@
 public class Obstacle2 extends Bullet {
   
   
-  
+  //render obstacles
   public void render()
   {
     fill(255, 0, 0);
@@ -16,6 +16,8 @@ public class Obstacle2 extends Bullet {
     } 
   }
   
+  
+  //when obstacles are hit
   public void hit()
   {
     for(int i = 0; i < 2; i++)

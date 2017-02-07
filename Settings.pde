@@ -23,6 +23,7 @@ public class Settings {
     rect(650, 180, 50, 50, 20);
     rect(720, 180, 50, 50, 20);
     
+    //NUMMBERS
     pushStyle();
     textSize(20);
     fill(255, 0, 0);
@@ -49,6 +50,3 @@ public class Settings {
   }
  
 }
-
-
-//settings can deal with difficulty(speed), bg colour, and number of obs.;

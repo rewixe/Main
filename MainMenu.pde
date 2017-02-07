@@ -1,6 +1,7 @@
 PFont myFont;
 
 public class MainMenu {
+  //background for menu
   public void bg()
   {
     for(int i = 0; i < height; i += 10)
@@ -10,6 +11,7 @@ public class MainMenu {
     }
   }
   
+  //menu
   public void menu()
   {
     pushStyle();
@@ -26,6 +28,7 @@ public class MainMenu {
     popStyle();
   }
   
+  //play game and settings buttons
   public void buttons()
   {
     pushStyle();
@@ -42,6 +45,3 @@ public class MainMenu {
   }
   
 }//end class
-
-
-//Create a new method for the background lines and the start menu text
